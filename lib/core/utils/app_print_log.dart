@@ -5,7 +5,7 @@ const bool debugMode = true;
 void printLog(String text) {
   if (debugMode) {
     if (kDebugMode) {
-      print("Demo App : $text");
+      print("Test App : $text");
     }
   }
 }

@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:intl/intl.dart';
 import 'package:news_explorer_app/core/utils/app_string.dart';
 import 'package:news_explorer_app/features/news/presentation/widgets/build_article_card.dart';
 import '../providers/news_provider.dart';
 import '../providers/news_state.dart';
-import 'article_detail_page.dart';
 
 class NewsListPage extends ConsumerStatefulWidget {
   const NewsListPage({super.key});
@@ -19,15 +16,6 @@ class _NewsListPageState extends ConsumerState<NewsListPage> {
   final ScrollController _scrollController = ScrollController();
   final TextEditingController _searchController = TextEditingController();
   String _selectedCategory = 'business';
-
-  final List<String> _categories = [
-    'business',
-    'technology',
-    'sports',
-    'entertainment',
-    'health',
-    'science',
-  ];
 
   @override
   void initState() {
@@ -69,7 +57,7 @@ class _NewsListPageState extends ConsumerState<NewsListPage> {
                 child: TextField(
                   controller: _searchController,
                   decoration: InputDecoration(
-                    hintText: 'Search news...',
+                    hintText: AppStrings.searchNews,
                     prefixIcon: const Icon(Icons.search),
                     suffixIcon: _searchController.text.isNotEmpty
                         ? IconButton(
@@ -150,7 +138,7 @@ class _NewsListPageState extends ConsumerState<NewsListPage> {
             ElevatedButton(
               onPressed: () => ref.read(newsNotifierProvider.notifier)
                   .loadNews(_selectedCategory),
-              child: const Text('Retry'),
+              child: const Text(AppStrings.retry),
             ),
           ],
         ),
@@ -164,7 +152,7 @@ class _NewsListPageState extends ConsumerState<NewsListPage> {
           children: [
             Icon(Icons.inbox, size: 64, color: Colors.grey),
             SizedBox(height: 16),
-            Text('No articles found'),
+            Text(AppStrings.noArticlesFound),
           ],
         ),
       );
@@ -194,4 +182,12 @@ class _NewsListPageState extends ConsumerState<NewsListPage> {
     }
     return const SizedBox.shrink();
   }
+  final List<String> _categories = [
+    'business',
+    'technology',
+    'sports',
+    'entertainment',
+    'health',
+    'science',
+  ];
 }

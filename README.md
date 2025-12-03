@@ -206,7 +206,8 @@ Clean Architecture
 4. Unit Tests
    📄 How to Run
    flutter pub add --dev mocktail
-   flutter pub run build_runner build --delete-conflicting-outputs
+   flutter pub run build_runner build --delete-conflicting-outputs 
+   flutter pub add --dev hive_test
    flutter test test/news_remote_data_source_test.dart
    flutter test test/news_local_data_source_test.dart
    flutter test test/news_repository_test.dart

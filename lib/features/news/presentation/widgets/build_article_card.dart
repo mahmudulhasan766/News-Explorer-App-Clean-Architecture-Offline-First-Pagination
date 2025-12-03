@@ -11,7 +11,18 @@ class BuildArticleCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withValues(alpha: 0.1),
+            offset: Offset(0, 3),
+            blurRadius: 7,
+            spreadRadius: 2,
+          ),
+        ],
+      ),
       margin: const EdgeInsets.all(8),
       child: InkWell(
         onTap: () {
