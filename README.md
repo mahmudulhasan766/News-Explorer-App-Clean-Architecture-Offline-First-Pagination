@@ -170,6 +170,14 @@ await dotenv.load(fileName: ".env");
 
 📸 Screenshots / Recordings
 https://drive.google.com/file/d/1mBi2iQCrr21SK1_a7NLIZvDWzsWBg9xC/view?usp=sharing
+
+https://drive.google.com/file/d/1aY2ZiEwqXPshxpQ4CJd_wjREAobr8Ybh/view?usp=sharing
+
+https://drive.google.com/file/d/1rPOcZuPOisw7H_BN1uf7ukrAGTU6I_zo/view?usp=sharing
+
+https://drive.google.com/file/d/1CGteS1AHufrOf5nezo6JR5MR-GChDl7e/view?usp=sharing
+
+
 Add before submitting:
 Home Page
 Pagination demo
